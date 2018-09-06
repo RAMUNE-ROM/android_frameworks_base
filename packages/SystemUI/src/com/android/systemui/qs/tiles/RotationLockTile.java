@@ -81,7 +81,7 @@ public class RotationLockTile extends QSTileImpl<BooleanState> {
 
     @Override
     protected void handleLongClick() {
-      setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_REVERSE_PORTRAIT);
+      Activity.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_REVERSE_PORTRAITrotate);
     }
 
     @Override
