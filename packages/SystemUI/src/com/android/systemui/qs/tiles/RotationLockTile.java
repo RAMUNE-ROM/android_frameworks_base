@@ -72,8 +72,8 @@ public class RotationLockTile extends QSTileImpl<BooleanState> {
     }
 
     @Override
-    public void handleLongClick() {
-        mController.setRotationLockedAtAngle(true, 180)
+    public Intent getLongClickIntent() {
+        return new Intent(Settings.ACTION_DISPLAY_SETTINGS);
     }
 
     @Override
