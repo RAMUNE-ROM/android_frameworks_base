@@ -16,9 +16,6 @@
 
 package com.android.systemui.qs.tiles;
 
-import android.app.Activity;
-import android.content.pm.ActivityInfo;
-
 import android.content.Context;
 import android.content.Intent;
 import android.content.res.Configuration;
@@ -75,13 +72,8 @@ public class RotationLockTile extends QSTileImpl<BooleanState> {
     }
 
     @Override
-    public Intent getLongClickIntent() {
-      return new Intent(Settings.ACTION_DISPLAY_SETTINGS);
-    }
-
-    @Override
-    protected void handleLongClick() {
-      setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_REVERSE_PORTRAIT);
+    public void handleLongClick() {
+        mController.setRotationLockedAtAngle(true, 180);
     }
 
     @Override
